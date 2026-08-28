@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Snakefy Game</title>
+    <meta name="description" content="Snakefy - Classic Snake Game">
+    <meta name="theme-color" content="#050505">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="game-container">
+
+        <header class="game-header">
+            <div>
+                <h1>SNAKEFY</h1>
+                <p>Classic Snake Game</p>
+            </div>
+
+            <div class="score-box">
+                <span>SCORE</span>
+                <strong id="score">0</strong>
+            </div>
+        </header>
+
+        <section class="stats">
+            <div class="stat">
+                <span>HIGH SCORE</span>
+                <strong id="highScore">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>LEVEL</span>
+                <strong id="level">1</strong>
+            </div>
+
+            <div class="stat">
+                <span>SPEED</span>
+                <strong id="speed">1x</strong>
+            </div>
+        </section>
+
+        <section class="game-wrapper">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+            <div id="startScreen" class="overlay">
+                <div class="overlay-content">
+                    <div class="snake-icon">🐍</div>
+                    <h2>SNAKEFY</h2>
+                    <p>Eat the food. Grow longer. Don't hit yourself.</p>
+
+                    <button id="startButton" class="main-button">
+                        START GAME
+                    </button>
+
+                    <small>
+                        Keyboard: Arrow Keys / WASD
+                    </small>
+                </div>
+            </div>
+
+            <div id="gameOverScreen" class="overlay hidden">
+                <div class="overlay-content">
+                    <div class="game-over-icon">💀</div>
+                    <h2>GAME OVER</h2>
+
+                    <p>Your Score</p>
+                    <strong id="finalScore" class="final-score">0</strong>
+
+                    <p id="newRecord" class="new-record hidden">
+                        🏆 NEW HIGH SCORE!
+                    </p>
+
+                    <button id="restartButton" class="main-button">
+                        PLAY AGAIN
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mobile-controls">
+            <button class="control empty"></button>
+
+            <button class="control" data-direction="up" aria-label="Up">
+                ▲
+            </button>
+
+            <button class="control empty"></button>
+
+            <button class="control" data-direction="left" aria-label="Left">
+                ◀
+            </button>
+
+            <button class="control" data-direction="down" aria-label="Down">
+                ▼
+            </button>
+
+            <button class="control" data-direction="right" aria-label="Right">
+                ▶
+            </button>
+        </section>
+
+        <section class="instructions">
+            <p>
+                <span>⌨</span>
+                Use <strong>Arrow Keys</strong> or <strong>WASD</strong> to move
+            </p>
+
+            <p>
+                <span>🍎</span>
+                Eat food to increase your score
+            </p>
+        </section>
+
+        <footer>
+            <p>Snakefy Game</p>
+        </footer>
+
+    </main>
+
+    <script src="game.js"></script>
+</body>
+</html>
+
